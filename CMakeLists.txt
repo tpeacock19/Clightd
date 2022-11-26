@@ -94,7 +94,7 @@ macro(optional_dep name modules description)
     endif()
 endmacro()
 
-optional_dep(GAMMA "x11;xrandr;libdrm;wayland-client" "Gamma correction" protocol/wlr-gamma-control-unstable-v1.xml src/modules/gamma_plugins)
+optional_dep(GAMMA "x11;xrandr;libdrm>=2.4.112;wayland-client" "Gamma correction" protocol/wlr-gamma-control-unstable-v1.xml src/modules/gamma_plugins)
 optional_dep(DPMS "x11;xext;libdrm;wayland-client" "DPMS" protocol/org_kde_kwin_dpms.xml src/modules/dpms_plugins)
 optional_dep(SCREEN "x11" "screen emitted brightness" protocol/wlr-screencopy-unstable-v1.xml src/modules/screen_plugins)
 optional_dep(DDC "ddcutil>=0.9.5" "external monitor backlight")
